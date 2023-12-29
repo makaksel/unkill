@@ -2,6 +2,7 @@ import * as nodePath from 'path';
 
 const rootFolder = nodePath.basename(nodePath.resolve());
 
+// TODO путь docs что-бы залить на гитхабпейджс
 const buildFolder = './docs';
 const scrFolder = './src';
 
