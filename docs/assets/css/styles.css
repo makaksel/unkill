@@ -684,15 +684,23 @@ img {
 
 .about-card__media {
   display: flex;
-  padding: isRem(19);
+  align-items: center;
+  justify-content: center;
+  max-width: 6.25rem;
+  flex: 0 0 auto;
+  padding: 1.1875rem;
+  background-color: #F8F8F8;
+  border-radius: 100%;
+  margin-bottom: 1.625rem;
 }
 
 .about-card__icon {
   width: 100%;
   height: 100%;
-  max-width: 6.25rem;
-  max-height: 6.25rem;
-  margin-bottom: 1.625rem;
+  max-width: 3.875rem;
+  max-height: 3.875rem;
+  -o-object-fit: none;
+     object-fit: none;
 }
 
 .about-card__title {
@@ -2740,6 +2748,11 @@ img {
 
   .about-card {
     padding: 0;
+  }
+
+  .about-card__media {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .header__select,
