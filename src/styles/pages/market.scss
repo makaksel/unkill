@@ -1,0 +1,251 @@
+.market-page {
+    padding-top: inRem(70);
+    padding-bottom: inRem(200);
+    background-color: var(--bg);
+
+    @include e-md {
+        padding-top: inRem(80);
+        padding-bottom: inRem(150);
+    }
+
+    @include xs {
+        padding-top: inRem(50);
+        padding-bottom: inRem(130);
+    }
+}
+
+.slider {
+    background-color: var(--white);
+    margin-bottom: inRem(110);
+
+    &__container {
+        position: relative;
+    }
+}
+
+.market-slider {
+    background-color: var(--white);
+    overflow: hidden;
+}
+
+.market-slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: inRem(35);
+    padding: inRem(34) inRem(54) inRem(51) inRem(54);
+    height: 100%;
+
+    &__img {
+        max-width: inRem(343);
+    }
+
+    &__content {
+        @include flex-column;
+        height: auto;
+        max-width: inRem(700);
+    }
+
+    &__title {
+        margin-bottom: inRem(40);
+        font-size: inRem(75);
+        font-weight: 700;
+        line-height: 110%;
+        letter-spacing: inRem(-1.5);
+        color: var(--black);
+    }
+
+    &__dscr {
+        max-width: inRem(342);
+        margin-bottom: inRem(60);
+        font-size: inRem(20);
+        font-weight: 400;
+        line-height: 140%;
+        color: var(--grey);
+    }
+
+    &__btn {
+        align-self: flex-start;
+        margin-top: auto;
+        padding: inRem(23) inRem(50);
+    }
+
+    @include lg {
+        &__title {
+            font-size: inRem(70);
+        }
+    }
+
+    @include e-md {
+        &__title {
+            font-size: inRem(40);
+        }
+
+        &__dscr {
+            font-size: inRem(18);
+        }
+
+        &__btn {
+            padding: inRem(20) inRem(35);
+        }
+
+        &__img {
+            max-width: inRem(255);
+        }
+    }
+
+    @include md {
+        padding: inRem(35);
+        &__img {
+            max-width: inRem(220);
+        }
+
+        &__content {
+            max-width: inRem(335);
+        }
+
+        &__title {
+            font-size: inRem(35);
+        }
+
+        &__btn {
+            font-size: inRem(20);
+            padding-left: inRem(25);
+            padding-right: inRem(25);
+        }
+    }
+
+    @include s {
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+
+        &__content {
+            text-align: center;
+            align-items: center;
+            max-width: 90%;
+        }
+
+        &__title {
+            margin-bottom: inRem(25);
+        }
+
+        &__dscr {
+            margin-bottom: inRem(20);
+        }
+
+        &__btn {
+            align-self: center;
+        }
+    }
+
+    @include xs {
+        &__content {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    @include xxs {
+        &__img {
+            max-width: inRem(171);
+        }
+
+        &__title {
+            font-size: inRem(32);
+        }
+
+        &__dscr {
+            font-size: inRem(16);
+        }
+
+        &__content {
+            text-align: left;
+            align-items: flex-start;
+        }
+
+        &__btn {
+            padding-left: inRem(10);
+            padding-right: inRem(10);
+        }
+    }
+}
+
+.slider-arrow-prev {
+    position: absolute;
+    top: inRem(256);
+    left: inRem(5);
+    cursor: pointer;
+    z-index: 10;
+    transition: fill .3s ease-in-out;
+
+    @include e-md {
+        top: inRem(185);
+        left: inRem(15);
+    }
+
+    @include s {
+        top: inRem(245);
+    }
+
+    @include xxs {
+        top: 101%;  
+    }
+
+    &:hover {
+        fill: var(--grey);
+    }
+}
+
+.slider-arrow-next {
+    position: absolute;
+    top: inRem(256);
+    right: inRem(5);
+    cursor: pointer;
+    z-index: 10;
+    transition: fill .3s ease-in-out;
+
+    @include e-md {
+        top: inRem(185);
+        right: inRem(15);
+    }
+
+    @include s {
+        top: inRem(245);
+    }
+
+    @include xxs {
+        top: 101%;  
+    }
+
+    &:hover {
+        fill: var(--grey);
+    }
+}
+
+.slider-el-center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: inRem(-40);
+}
+
+.swiper-pagination {
+    position: static;
+}
+
+.swiper-pagination-bullet {
+    width: inRem(10);
+    height: inRem(10);
+    margin-right: inRem(10);
+}
+
+.market-books {
+    display: grid;
+
+    @include xs {
+        grid-template-columns: 1fr;
+    }
+}

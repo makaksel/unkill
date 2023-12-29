@@ -1,0 +1,550 @@
+.insurance-page {
+    background-color: var(--bg);
+
+    &>.section {
+        margin-bottom: inRem(150);
+    }
+
+    @include xs {
+        &>.section {
+            margin-bottom: inRem(100);
+        }
+    }
+}
+
+.i-hero {
+
+    &__container {
+        background: url('../images/i-hero-bg.png') right center/ inRem(601) auto no-repeat;
+    }
+
+    &__content {
+        max-width: inRem(542);
+        padding-top: inRem(124);
+        padding-bottom: inRem(125);
+    }
+
+    &__title {
+        max-width: inRem(542);
+        margin-bottom: inRem(42);
+        text-align: left;
+        color: var(--black);
+    }
+
+    &__dscr {
+        max-width: inRem(373);
+        margin-bottom: inRem(55);
+        font-size: inRem(20);
+        font-weight: 400;
+        line-height: 140%;
+        color: var(--black);
+    }
+
+    &__btn {
+        padding-top: inRem(23);
+        padding-bottom: inRem(23);
+    }
+
+    @include lg {
+        &__container {
+            background-size: inRem(500) auto;
+        }
+    }
+
+    @include e-md {
+        &__container {
+            background-size: inRem(390) auto;
+            background-position: right inRem(70) center;
+        }
+
+        &__content {
+            padding-top: inRem(132);
+            padding-bottom: inRem(72);
+        }
+
+        &__title {
+            font-size: inRem(60);
+        }
+    }
+
+    @include md {
+        &__container {
+            background-size: inRem(340) auto;
+            background-position: right inRem(25) center;
+        }
+    }
+
+    @media(max-width: 800px) {
+        &__container {
+            background-size: inRem(280) auto;
+        }
+    }
+
+    @include s {
+        &__container {
+            background: none;
+        }
+
+        &__content {
+            @include flex-column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            max-width: 100%;
+            padding-bottom: 0;
+        }
+
+        &__title {
+            text-align: center;
+        }
+    }
+
+    @include xs-plus {
+
+        &__content {
+            padding-top: inRem(101);
+            padding-bottom: 0;
+        }
+
+        &__title {
+            font-size: inRem(45);
+        }
+    }
+}
+
+.i-archive {
+
+    &__container {
+        background: url('../images/i-archive-bg.png') center center/ 100% 100% no-repeat;
+        padding-top: inRem(40);
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    &__block {
+        margin-left: inRem(40);
+        border-radius: inRem(50);
+        background: #FFF url('../images/i-archive-folder.png') center right inRem(95)/ inRem(451) auto no-repeat
+    }
+
+    &__content {
+        width: 100%;
+        padding-top: inRem(160);
+        padding-bottom: inRem(106);
+        padding-left: inRem(109);
+    }
+
+    &__title {
+        margin-bottom: inRem(40);
+    }
+
+    &__dscr {
+        max-width: inRem(340);
+        margin-bottom: inRem(60);
+        font-size: inRem(20);
+        font-weight: 400;
+        line-height: 140%;
+        color: var(--grey);
+    }
+
+    @include lg {
+        &__block {
+            background-size: inRem(351) auto;
+        }
+    }
+
+    @include e-md {
+        &__container {
+            background-size: 90% 100%;
+        }
+
+        &__block {
+            max-width: 84%;
+            margin-left: inRem(100);
+            background-size: inRem(363) auto;
+            background-position: right inRem(40) center;
+        }
+
+        &__content {
+            padding-top: inRem(68);
+            padding-bottom: inRem(43);
+            padding-left: inRem(80);
+        }
+
+        &__title {
+            max-width: inRem(256);
+            font-size: inRem(40);
+        }
+
+        &__dscr {
+            margin-bottom: inRem(53);
+            max-width: inRem(260);
+        }
+    }
+
+    @include md {
+        &__block {
+            max-width: 81%;
+            background-size: inRem(220) auto;
+            background-position: right inRem(30) center;
+        }
+
+        &__content {
+            padding-left: inRem(35);
+        }
+    }
+
+    @include s {
+        &__container {
+            background: none;
+            padding-left: inRem(35);
+            padding-right: inRem(35);
+        }
+
+        &__block {
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            background-size: inRem(190) auto;
+            background-position: right inRem(10) center;
+        }
+
+        &__dscr {
+            max-width: inRem(220);
+        }
+    }
+
+    @include xs {
+        &__block {
+            background-position: top inRem(30) left inRem(30);
+        }
+
+        &__content {
+            padding-top: inRem(200);
+            padding-right: inRem(30);
+        }
+
+        &__title {
+            margin-bottom: inRem(30);
+        }
+
+        &__dscr {
+            max-width: inRem(400);
+        }
+
+        &__btn {
+            width: 100%;
+        }
+    }
+
+    @include xs-plus {
+        &__block {
+            background-size: inRem(150) auto;
+        }
+
+        &__content {
+            padding-top: inRem(170);
+        }
+
+        &__btn {
+            font-size: inRem(16);
+        }
+    }
+
+    @include xxs {
+        &__block {
+            background-size: inRem(103) auto;
+        }
+
+        &__content {
+            padding-top: inRem(115);
+        }
+
+        &__dscr {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+.i-about {
+
+    &__title {
+        margin-bottom: inRem(40);
+    }
+
+    &__block {
+        padding: inRem(50) inRem(573) inRem(50) inRem(70);
+        border-radius: inRem(30);
+        background: var(--white) url('../images/i-about-bg.png') right inRem(160) top inRem(50)/ inRem(240) auto no-repeat;
+    }
+
+    &__text,
+    &__item {
+        margin-bottom: inRem(70);
+        font-size: inRem(20);
+        font-weight: 400;
+        line-height: 140%;
+        color: var(--grey);
+
+        &--mb {
+            margin-bottom: 0;
+        }
+
+        &--bold {
+            margin-bottom: 0;
+            font-weight: 700;
+        }
+
+        &--bold-mb {
+            margin-bottom: inRem(35);
+        }
+    }
+
+    &__item {
+        display: block;
+        margin-bottom: 0;
+    }
+
+    &__more,
+    &__hidden {
+        margin-top: auto;
+        font-size: inRem(20);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%;
+        color: var(--main);
+        background-color: transparent;
+        padding: 0;
+        border: none;
+        cursor: pointer;
+    }
+
+    @include lg {
+        &__block {
+            padding-right: inRem(450);
+            background-position: right inRem(60) top inRem(50);
+        }
+    }
+
+    @include e-md {
+        &__block {
+            padding-right: inRem(350);
+            background-position: right inRem(40) top inRem(50);
+        }
+    }
+
+    @include md {
+        &__block {
+            padding-right: inRem(250);
+            background-position: right inRem(20) top inRem(50);
+            background-size: inRem(200) auto;
+        }
+    }
+
+    @include s {
+        &__block {
+            padding: inRem(30);
+            padding-top: 78%;
+            background: var(--white) url('../images/i-about-bg-phone.png') top inRem(30) center/ 90% auto no-repeat;
+        }
+    }
+
+    @include xs-plus {
+
+        &__text,
+        &__item,
+        &__more {
+            font-size: inRem(18);
+        }
+    }
+}
+
+.i-get {
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: inRem(32);
+        padding: inRem(30);
+        background-color: var(--white);
+        border-radius: inRem(30);
+
+        &>.about-card {
+            padding: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: inRem(40);
+    }
+
+    @include e-md {
+
+        &__grid {
+            padding-top: inRem(60);
+            grid-template-columns: 1fr;
+            gap: inRem(62);
+
+            &>.about-card {
+                display: flex;
+                max-width: 80%;
+                gap: inRem(30);
+            }
+        }
+    }
+
+    @include s {
+        &__grid {
+            padding-top: inRem(24);
+            gap: inRem(50);
+
+            &>.about-card {
+                flex-direction: column;
+                max-width: 100%;
+                gap: 0;
+            }
+        }
+    }
+}
+
+.i-step {
+
+    &__title {
+        margin-bottom: inRem(40);
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: inRem(25) inRem(30) inRem(25) inRem(20);
+        background-color: var(--white);
+        border-radius: inRem(30);
+    }
+
+    @include s {
+        &__grid {
+            grid-template-columns: 1fr;
+            padding: inREm(24);
+        }
+    }
+}
+
+.i-question {
+    background: var(--white) url('../images/i-question-bg.png') center right/ inRem(956) 100% no-repeat;
+
+    &__content {
+        max-width: inRem(578);
+        padding-top: inRem(155);
+        padding-bottom: inRem(156);
+    }
+
+    &__title {
+        margin-bottom: inRem(50);
+    }
+
+    &__dscr,
+    &__link {
+        margin-bottom: inRem(70);
+        font-size: inRem(20);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        color: var(--black);
+    }
+
+    &__link {
+        color: var(--main);
+    }
+
+    &__btn {
+        padding-top: inRem(22);
+        padding-bottom: inRem(22);
+    }
+
+    @media(max-width: 1500px) {
+        background-size: inRem(766) auto;
+
+        &__content {
+            padding-top: inRem(95);
+            padding-bottom: inRem(95);
+        }
+    }
+
+    @include lg {
+        background-size: inRem(570) 100%;
+    }
+
+    @include e-md {
+        background-size: inRem(462) 100%;
+
+        &__content {
+            max-width: inRem(510);
+            padding-top: inRem(40);
+            padding-bottom: inRem(70);
+        }
+    }
+
+    @include md {
+        background: var(--white) url('../images/i-question-bg-phone.png') top left/ inRem(320) auto no-repeat;
+
+        &__content {
+            padding-top: inRem(170);
+        }
+    }
+
+    @include xs-plus {
+        background-size: inRem(160) auto;
+
+        &__content {
+            width: 100%;
+            padding-top: inRem(110);
+            padding-bottom: inRem(45);
+        }
+
+        &__btn {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+.i-accordion {
+
+    &__main-title {
+        margin-bottom: inRem(44);
+    }
+
+    &__content {
+        min-height: inRem(900);
+        background: url('../images/i-accordion-bg.png') right top/ 50% auto no-repeat; 
+    }
+
+    &__flex {
+        @include flex-column;
+        gap: inRem(16);
+        max-width: 50%;
+    }
+
+    @include e-md {
+        &__flex {
+            max-width: 60%;
+        }
+
+        &__content {
+            min-height: 0;
+            background-size: 38% auto;
+        }
+    }
+
+    @include s {
+        &__content {
+            background: none;
+        }
+
+        &__flex {
+            max-width: 100%;
+        }
+    }
+}

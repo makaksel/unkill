@@ -1,0 +1,45 @@
+.journal-page {
+    padding-top: inRem(140);
+    padding-bottom: inRem(154);
+    background-color: var(--bg);
+
+    @include e-md {
+        padding-top: inRem(80);
+        padding-bottom: inRem(150);
+    }
+
+    @include xs {
+        padding-top: inRem(50);
+        padding-bottom: inRem(130);
+    }
+}
+
+.journal {
+
+    &__body {
+        @include flex-column;
+        gap: inRem(24);
+    }
+
+    &__title {
+        max-width: inRem(404);
+        margin-bottom: inRem(45);
+        font-size: inRem(40);
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: inRem(0.4);
+        color: var(--black);
+    }
+
+    @include xs {
+
+        &__body {
+            gap: inRem(40);
+        }
+
+        &__title {
+            font-size: inRem(32);
+        }
+    }
+}

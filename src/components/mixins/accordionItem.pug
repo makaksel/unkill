@@ -1,0 +1,8 @@
+mixin accordionItem(title, dscr='Lorem')
+    .accordion-item
+        .accordion-item__header
+            h3.accordion-item__title=title
+            svg(class="accordion-item__icon" width="16" height="10" viewBox="0 0 16 10")
+                use(xlink:href="#accordionArrow")
+        .accordion-item__body
+            p.accordion-item__dscr=dscr

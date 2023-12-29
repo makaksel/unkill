@@ -1,0 +1,48 @@
+.i-step-card {
+    background-color: var(--white);
+    padding: inRem(30);
+
+    &__number {
+        display: inline-block;
+        margin-bottom: inRem(26);
+        padding: inRem(17) inRem(25);
+        font-size: inRem(24);
+        font-weight: 700;
+        line-height: 110%;
+        color: var(--main);
+        background-color: var(--bg);
+        border-radius: 100%;
+    }
+
+    &__title {
+        margin-bottom: inRem(18);
+        font-size: inRem(22);
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: inRem(0.22);
+        color: var(--black);
+    }
+
+    &__dscr,
+    &__link {
+        font-size: inRem(20);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        color: var(--grey);
+    }
+
+    &__link {
+        color: var(--main);
+    }
+
+    @include xxs {
+        padding: inRem(24);
+        padding-left: 0;
+        padding-right: 0;
+        &__title,
+        &__dscr {
+            font-size: inRem(18);
+        }
+    }
+}

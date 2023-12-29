@@ -1,0 +1,4 @@
+mixin tag(text, up=true)
+    - var blockClass = up ? 'tag-block tag-block--up' : 'tag-block tag-block--down'
+        div(class=`${blockClass}`)
+            p.tag-block__text=text

@@ -1,0 +1,91 @@
+.btn {
+    padding: inRem(30) inRem(50);
+    border: inRem(2) solid var(--main);
+    border-radius: inRem(50);
+    background-color: var(--main);
+    font-size: inRem(22);
+    font-weight: 500;
+    text-align: center;
+    line-height: normal;
+    color: var(--white);
+    cursor: pointer;
+    transition: background-color .25s ease-in-out, color .25s ease-in-out;
+
+    &:hover {
+        background-color: transparent;
+        color: var(--main);
+    }
+
+    &:focus {
+        outline: none;
+        background-color: transparent;
+        color: var(--main);
+    }
+
+    &:active {
+        color: var(--main-active);
+    }
+
+    &--transparent {
+        padding: inRem(16) inRem(20);
+        background-color: transparent;
+        font-size: inRem(18);
+        color: var(--main);
+
+        &:hover {
+            background-color: var(--main);
+            color: var(--white);
+        }
+
+        &:focus {
+            outline: none;
+            background-color: var(--main);
+            color: var(--white);
+        }
+
+        &:active {
+            background-color: var(--main-active);
+        }
+    }
+
+    &--grey {
+        background-color: var(--grey);
+        padding: inRem(22) inRem(91);
+        border: inRem(2) solid var(--grey);
+
+        
+        &:hover {
+            background-color: var(--white);
+            color: var(--grey);
+        }
+
+        &:focus {
+            outline: none;
+            background-color: var(--white);
+            color: var(--grey);
+            border: inRem(2) solid var(--grey);;
+        }
+
+        &:active {
+            color: var(--grey);
+        }
+    }
+
+    @include xs {
+        font-size: inRem(20);
+        padding: inRem(30) inRem(25);
+
+        &--transparent {
+            padding: inRem(16) inRem(20);
+        }
+    }
+
+    @include xxs {
+        font-size: inRem(18);
+        padding: inRem(25) inRem(20);
+
+        &--transparent {
+            padding: inRem(16) inRem(20);
+        }
+    }
+}

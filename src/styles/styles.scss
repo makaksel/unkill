@@ -1,0 +1,259 @@
+@import "functions";
+@import "normalize";
+@import "fonts";
+@import "colors";
+@import "variables";
+@import "media-queries";
+@import "mixins";
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+#svg-sprites {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Onest, serif;
+  font-size: 16px !important;
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0 0 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.main {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: inRem(1240);
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 var(--x-offset-main);
+}
+
+.main-title {
+  max-width: inRem(800);
+  margin-bottom: inRem(56);
+  font-size: inRem(80);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: inRem(-1.6);
+  text-align: center;
+  color: var(--black);
+
+  @include xs {
+    max-width: inRem(342);
+    font-size: inRem(45);
+  }
+}
+
+.section {
+  margin-bottom: var(--section-margin);
+
+  &--last-mb {
+    margin-bottom: var(--section-margin-last);
+  }
+
+  &__title {
+    max-width: inRem(640);
+    margin-bottom: inRem(44);
+    font-size: inRem(40);
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: inRem(0.4);
+    color: var(--black);
+
+    &--content {
+      @media(max-width: 965px) {
+        min-height: inRem(153);
+        box-sizing: content-box;
+      }
+
+      @include md {
+        min-height: 0;
+        box-sizing: border-box;
+      }
+    }
+
+    @include xs {
+      font-size: inRem(32);
+    }
+  }
+}
+
+.block {
+  display: block;
+}
+
+.z-index {
+  z-index: 1;
+}
+
+.close {
+  stroke: var(--black);
+  transition: stroke .25s ease-in-out;
+
+  &:hover {
+    stroke: var(--main);
+  }
+}
+
+.el-center {
+  text-align: center
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.opacity-07 {
+  opacity: 0.7;
+}
+
+.opacity-1 {
+  opacity: 1;
+}
+
+.gradient {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    background-image: linear-gradient(0deg, rgb(248, 248, 248), rgba(248, 248, 248, 0));
+  }
+
+  &--none::after {
+    background-image: none;
+  }
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+
+.copy {
+  fill: #9F9F9F;
+  transition: fill .25s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    fill: #5a5656;
+  }
+
+  &:active {
+    fill: var(--black);
+  }
+}
+
+.succsess-copy {
+  position: absolute;
+  top: 0;
+  right: inRem(-12);
+  background-color: var(--grey);
+  border: inRem(2) solid var(--black);
+  padding: inRem(5) inRem(8);
+  border-radius: inRem(20);
+  font-size: inRem(14);
+  font-weight: 500;
+  line-height: normal;
+  color: var(--white);
+}
+
+.slider-arrow {
+  fill: #EDEDED;
+}
+
+.i-title {
+  font-size: inRem(40);
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: inRem(0.4);
+  color: var(--black);
+
+  @include xs-plus {
+    font-size: inRem(38);
+  }
+
+  @include xs {
+    font-size: inRem(32);
+  }
+}
+
+
+
+@import './components/btn';
+@import './components/aboutCard';
+@import './components/numberCard';
+@import './components/bookCard';
+@import './components/tag';
+
+@import './components/header';
+@import './pages/index';
+@import './components/footer';
+
+@import './pages/journal';
+@import './components/journalCard';
+
+@import './pages/author';
+@import './components/editionCard';
+
+@import './pages/article';
+
+@import './pages/contact';
+
+@import './pages/market';
+
+@import './pages/insuranceBusiness';
+@import './components/iStepCard';
+@import './components/accordionItem';
+
+.flex {
+  display: flex;
+}
+
+.none {
+  display: none;
+}

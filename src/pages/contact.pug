@@ -1,0 +1,63 @@
+include ../components/mixins/page
+
++page('contact', 'Контакты', 'contact-page')
+
+    section.section
+        .container
+            h2.section__title Мы на карте
+            .map
+                <iframe class='map__frame' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1091.6633262016012!2d37.421806350205884!3d55.718486435189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54e8d38edc5df%3A0x45239c6904af36bd!2z0JzQvtC20LDQudGB0LrQvtC1INGILiwgMjksINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMjE0NzE!5e0!3m2!1sru!2seg!4v1692017811524!5m2!1sru!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    .contact
+        .contact__section-grid.container
+            section.section.contact__section-mb
+                h2.section__title.section__title--content Звоните для оперативной связи
+                .contact__block
+                    .contact__center
+                        svg.contact__icon(width="32" height="32" viewBox="0 0 32 32")
+                            use(xlink:href="#phone")
+                        a.contact__link(href="tel:+74992887335") +7 499 288-73-35
+            section.section
+                h2.section__title.section__title--content По всем вопросам — пишите на почту
+                .contact__block
+                    .contact__center.contact__center--column
+                        .contact__center.contact__center--mb
+                            svg.contact__icon(width="32" height="32" viewBox="0 0 32 32")
+                                use(xlink:href="#mail")
+                            a.contact__link(href="mailto:info@ankil.info") info@ankil.info
+                        .contact__center.contact__center--ml
+                            a.contact__send-link Написать →
+        section.container
+            h2.section__title Юридическая информация
+            .contact__info-block
+                .contact__block.contact__block--padding
+                    .contact__header.contact__header--mb
+                        svg.contact__copy.copy(width="17" height="17" viewBox="0 0 17 17")
+                            use(xlink:href="#copy")
+                        h3.contact__title Юридический адрес
+                    address.contact__dscr 121471, г. Москва, вн.тер.г. муниципальный округ Можайский, Можайское шоссе, дом  29, помещение 7/1
+                .contact__grid
+                    .contact__block
+                        .contact__header
+                            svg.contact__copy.copy(width="17" height="17" viewBox="0 0 17 17")
+                                use(xlink:href="#copy")
+                            h3.contact__title ОГРН 
+                        p.contact__dscr 1037739351539
+                    .contact__block
+                        .contact__header
+                            svg.contact__copy.copy(width="17" height="17" viewBox="0 0 17 17")
+                                use(xlink:href="#copy")
+                            h3.contact__title ИНН  
+                        p.contact__dscr 7709078120
+                    .contact__block
+                        .contact__header
+                            svg.contact__copy.copy(width="17" height="17" viewBox="0 0 17 17")
+                                use(xlink:href="#copy")
+                            h3.contact__title КПП 
+                        p.contact__dscr 773101001
+                    .contact__block
+                        .contact__header
+                            svg.contact__copy.copy(width="17" height="17" viewBox="0 0 17 17")
+                                use(xlink:href="#copy")
+                            h3.contact__title Код ОКПО   
+                        p.contact__dscr 26940442

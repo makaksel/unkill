@@ -1,0 +1,11 @@
+@use 'sass:math';
+
+@function inRem($size) {
+  @if unitless($size) {
+    $remSize: math.div($size, 16);
+
+    @return #{$remSize}rem;
+  } @else {
+    @error 'Не число';
+  }
+} 

@@ -1,0 +1,56 @@
+.accordion-item {
+    padding: inRem(25) 0;
+    border-bottom: inRem(1) solid var(--grey);
+    border-top: inRem(1) solid var(--grey);
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: margin-bottom .25s ease-in-out;
+
+        &--active {
+            margin-bottom: inRem(20);
+        }
+    }
+
+    &__title {
+        font-size: inRem(24);
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: inRem(0.24);
+        color: var(--black);
+    }
+
+    &__dscr {
+        font-size: inRem(20);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        color: var(--grey);
+    }
+
+    &__icon {
+        width: inRem(17);
+        height: inRem(10);
+        fill: var(--grey);
+        transition: transform .3s ease-in-out;
+
+        &--active {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    @include xs-plus {
+        &__dscr {
+            font-size: inRem(18);
+        }
+    }
+
+}

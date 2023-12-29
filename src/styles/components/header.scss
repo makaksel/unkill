@@ -1,0 +1,256 @@
+.header {
+  padding: inRem(30) 0;
+
+  &__container {
+    @include flex-row;
+    justify-content: space-between;
+    background-color: var(--white);
+  }
+
+  &__link.active {
+    color: var(--main);
+  }
+
+  &__link,
+  .burger-menu__link {
+    @include nav-link;
+  }
+
+  &__shop,
+  .burger-menu__shop {
+    @include flex-row;
+  }
+
+  &__shop-icon {
+    margin-right: inRem(15);
+  }
+
+  &__shop-link {
+    margin-right: inRem(50);
+    font-size: inRem(18);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: var(--main);
+
+    &:hover {
+      border-bottom: 1px solid var(--main);
+    }
+
+    &:focus {
+      border-bottom: 1px solid var(--main);
+      outline: none;
+    }
+  }
+
+  &__burger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: inininRem(30);
+    height: inininRem(8);
+    margin-left: auto;
+    padding-bottom: inininRem(7);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 101;
+  }
+
+    &__select,
+    &__insurance-select {
+      display: none;
+    }
+
+  @include e-md {
+    &__nav {
+      display: none;
+    }
+
+    &__select,
+    &__insurance-select {
+      display: block;
+    }
+
+    &__btn {
+      margin-right: inRem(30);
+    }
+  }
+
+  @include md {
+    &__btn {
+      margin-right: 0;
+    }
+
+    &__shop-link {
+      margin-right: inRem(20);
+    }
+  }
+
+  @include s {
+    &__select,
+    &__insurance-select {
+      display: none;
+    }
+
+    &__burger {
+      display: flex;
+    }
+
+    &__shop {
+      display: none;
+    }
+  }
+}
+
+.select {
+  max-width: inRem(160);
+  position: relative;
+  z-index: 10;
+
+  &:hover .select__input {
+    color: var(--main);
+  }
+
+  &:hover .select__icon {
+    fill: var(--main);
+  }
+
+  &:active .select__input {
+    color: var(--main-active);
+  }
+
+  &:active .select__icon {
+    fill: var(--main-active);
+  }
+
+  &__icon {
+    fill: var(--black);
+    transition: fill .25s ease-in-out;
+  }
+
+  &__backdrop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    z-index: -1;
+    display: none;
+  }
+
+  &.open {
+    .select__dropdown {
+      display: block;
+    }
+
+    .select__input {
+      border-bottom: none;
+    }
+
+    .select__backdrop {
+      display: block;
+    }
+  }
+
+  &__input {
+    display: flex;
+    align-items: center;
+    height: inRem(60);
+    padding: inRem(23) inRem(20);
+    border-radius: inRem(20);
+    border: none;
+    font-size: inRem(18);
+    font-weight: 500;
+    line-height: normal;
+    color: var(--black);
+    cursor: pointer;
+    transition: color .25s ease-in-out;
+
+    span {
+      margin-right: inRem(15);
+      pointer-events: none;
+    }
+  }
+
+  &__dropdown {
+    display: none;
+    position: absolute;
+    border: none;
+    border-radius: inRem(20);
+    top: inRem(60);
+    left: 0;
+    right: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 inRem(5) inRem(15);
+    background-color: var(--white);
+    z-index: 10;
+
+    .select__list {
+      list-style: none;
+      margin: 0;
+      padding: inRem(20);
+
+      .select__item {
+        cursor: pointer;
+        font-size: inRem(20) inRem(18);
+        font-weight: 400;
+        line-height: 140%;
+        color: var(--black);
+        transition: color .2s ease-in-out;
+
+        &:not(:last-child) {
+          margin-bottom: inRem(32);
+        }
+
+        &.selected {
+          background-color: var(--bg);
+        }
+
+        &:hover {
+          color: var(--main);
+        }
+      }
+    }
+  }
+}
+
+.open .select__icon {
+  transform: rotate(180deg);
+}
+
+.burger-menu {
+  @include flex-column;
+  position: relative;
+  padding: inRem(25);
+  background-color: var(--white);
+  border-radius: inRem(30);
+  z-index: 100;
+
+  &__links {
+    @include flex-column;
+    gap: inRem(32);
+    margin-bottom: inRem(40);
+  }
+
+  &__link {
+    margin-right: 0;
+    align-self: flex-start;
+  }
+
+  &__shop {
+    margin-bottom: inRem(16);
+  }
+
+  &__icon {
+    position: absolute;
+    top: inRem(20);
+    right: inRem(20);
+    cursor: pointer;
+  }
+}
+
+.burger-wrraper {
+  @include wrraper; 
+}

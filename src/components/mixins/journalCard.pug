@@ -1,0 +1,9 @@
+mixin journalCard(img, title, price, dscr, link)
+    .journal-card
+        img.journal-card__img(src=`./assets/images/journal${img}.png`, alt="Журнал")
+        .journal-card__content
+            .journal-card__header
+                h3.journal-card__title=title
+                p.btn.journal-card__price=price
+            p.journal-card__dscr=dscr
+            a.journal-card__link(href=`${link}`) Опубликовать статью →

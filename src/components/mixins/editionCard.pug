@@ -1,0 +1,9 @@
+mixin editionCard(img, title, dscr)
+    .edition-card
+        picture.edition-card__picture
+            source(media="(max-width: 390px)", srcset=`./assets/images/edition${img}--xs.png`)
+            source(media="(max-width: 1024px)", srcset=`./assets/images/edition${img}--e-md.png`)
+            img.edition-card__img(src=`./assets/images/edition${img}.png`, alt="Редакция")
+        .edition-card__content
+            h4.edition-card__title=title
+            p.edition-card__dscr=dscr

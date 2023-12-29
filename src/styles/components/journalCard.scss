@@ -1,0 +1,116 @@
+.journal-card {
+    display: flex;
+    padding: inRem(50);
+    background-color: var(--white);
+    border-radius: inRem(30);
+
+    &__img {
+        max-width: inRem(289);
+        margin-right: inRem(32);
+        object-fit: none;
+    }
+
+    &__content {
+        @include flex-column;
+    }
+
+    &__header {
+        @include flex-row;
+        justify-content: space-between;
+        max-width: inRem(560);
+        margin-bottom: inRem(24);
+    }
+
+    &__title {
+        max-width: inRem(412);
+        font-size: inRem(24);
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: inRem(0.24);
+        color: var(--black);
+    }
+
+    &__price {
+        padding: inRem(8) inRem(20);
+        font-size: inRem(22);
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: inRem(0.22);
+        white-space: nowrap;
+    }
+
+    &__dscr {
+        max-width: inRem(560);
+        margin-bottom: inRem(15);
+        font-size: inRem(20);
+        font-weight: 400;
+        line-height: 140%;
+        color: var(--grey);
+    }
+
+    &__link {
+        align-self: flex-start;
+        margin-top: auto;
+        padding-bottom: inRem(5);
+        font-size: inRem(18);
+        font-weight: 500;
+        line-height: normal;
+        color: var(--main);
+        border-bottom: inRem(1) solid transparent;
+        transition: color .25s ease-in-out;
+
+        &:hover {
+            color: var(--main-active);
+            border-color: var(--main);
+        }
+
+        &:focus {
+            outline: none;
+            color: var(--main-active);
+        }
+    }
+
+    @include e-md {
+        padding-left: inRem(30);
+
+        &__title {
+            max-width: inRem(344);
+        }
+
+        &__price {
+            padding: inRem(15) inRem(15);
+        }
+
+        &__img {
+            flex-shrink: 0;
+            max-width: inRem(270);
+        }
+    }
+
+    @include md {
+        padding: inRem(40) inRem(20);
+
+        &__header {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
+
+        &__title {
+            max-width: 100%;
+        }
+
+        &__price {
+            margin-bottom: inRem(20);
+        }
+    }
+
+    @include s {
+        flex-direction: column;
+
+        &__img {
+            margin-right: 0;
+            margin-bottom: inRem(30);
+            object-fit: cover;
+        }
+    }
+}

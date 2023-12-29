@@ -1,0 +1,65 @@
+include ../components/mixins/page
+include ../components/mixins/btn
+include ../components/mixins/bookCard
+
++page('market', 'Магазин', 'market-page')
+
+    section.slider
+        .container.slider__container
+            .swiper.market-slider
+                .swiper-wrapper
+                    .swiper-slide.market-slide
+                        .market-slide__content
+                            h2.market-slide__title 10 советов всем страховщикам
+                            p.market-slide__dscr Рассказываем о лучших способов застраховать свое имущество
+                            a.market-slide__btn.btn(href="./") Оформить предзаказ →
+                        img.market-slide__img(src="./assets/images/slider1.png", alt="Журнал")
+                    .swiper-slide.market-slide
+                        .market-slide__content
+                            h2.market-slide__title Как правильно оформить страховку?
+                            p.market-slide__dscr Рассказываем о лучших способов застраховать свое имущество
+                            a.market-slide__btn.btn(href="./") Оформить предзаказ →
+                        img.market-slide__img(src="./assets/images/slider2.png", alt="Журнал")
+            svg.slider-arrow.slider-arrow-prev(width="48" height="48" viewBox="0 0 48 48")
+                use(xlink:href="#prevArrow")
+            svg.slider-arrow.slider-arrow-next(width="48" height="48" viewBox="0 0 48 48")
+                use(xlink:href="#nextArrow")
+            .el-center.slider-el-center
+                .swiper-pagination
+    .container
+        section.section
+            h2.section__title Хит продаж
+            .books.market-books
+                +bookCard('1', 'Теория и практика страхования', 'Издательство «Анкил»', ['текст', 'аудио'], false, null)
+                +bookCard('1', 'Теория и практика страхования', 'Издательство «Анкил»', ['текст', 'аудио'], false, null)
+                +bookCard('1', 'Теория и практика страхования', 'Издательство «Анкил»', ['текст', 'аудио'], false, null)
+                +bookCard('1', 'Теория и практика страхования', 'Издательство «Анкил»', ['текст', 'аудио'], false, null)
+                +bookCard('1', 'Теория и практика страхования', 'Издательство «Анкил»', ['текст', 'аудио'], false, null)
+                +bookCard('1', 'Теория и практика страхования', 'Издательство «Анкил»', ['текст', 'аудио'], false, null)
+                +bookCard('1', 'Теория и практика страхования', 'Издательство «Анкил»', ['текст', 'аудио'], false, null)
+                +bookCard('1', 'Теория и практика страхования', 'Издательство «Анкил»', ['текст', 'аудио'], false, null)
+        section.section
+            h2.section__title Новинки
+            .books.market-books
+                +bookCard('1', 'Теория и практика страхования', 'Издательство «Анкил»', ['текст', 'аудио'], false, '1990 ₽')
+                +bookCard('1', 'Теория и практика страхования', 'Издательство «Анкил»', ['текст', 'аудио'], false, '1990 ₽')
+                +bookCard('1', 'Теория и практика страхования', 'Издательство «Анкил»', ['текст', 'аудио'], false, '1990 ₽')
+        section.section
+            h2.section__title Издательство Анкил
+            .books.market-books
+                +bookCard('1', 'Теория и практика страхования', 'Издательство «Анкил»', ['текст', 'аудио'], false, null)
+                +bookCard('1', 'Теория и практика страхования', 'Издательство «Анкил»', ['текст', 'аудио'], false, null)
+                +bookCard('1', 'Теория и практика страхования', 'Издательство «Анкил»', ['текст', 'аудио'], false, null)
+                +bookCard('1', 'Теория и практика страхования', 'Издательство «Анкил»', ['текст', 'аудио'], false, null)
+                +bookCard('1', 'Теория и практика страхования', 'Издательство «Анкил»', ['текст', 'аудио'], false, null)
+        section.section
+            h2.section__title Книги партнеров
+            .books.market-books
+                +bookCard('1', 'Теория и практика страхования', 'Издательство «Анкил»', ['текст', 'аудио'], false, '1990 ₽')
+                +bookCard('1', 'Теория и практика страхования', 'Издательство «Анкил»', ['текст', 'аудио'], false, '1990 ₽')
+                +bookCard('1', 'Теория и практика страхования', 'Издательство «Анкил»', ['текст', 'аудио'], false, '1990 ₽')
+        section.section
+            h2.section__title Детские книги
+            .books.market-books
+                +bookCard('1', 'Теория и практика страхования', 'Издательство «Анкил»', ['текст', 'аудио'], false, null)
+                +bookCard('1', 'Теория и практика страхования', 'Издательство «Анкил»', ['текст', 'аудио'], false, null)

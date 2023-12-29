@@ -1,0 +1,15 @@
+.article-page {
+    padding-top: inRem(140);
+    padding-bottom: inRem(150);
+    background-color: var(--bg);
+
+    @include e-md {
+        padding-top: inRem(80);
+        padding-bottom: inRem(125);
+    }
+
+    @include xs {
+        padding-top: inRem(50);
+        padding-bottom: inRem(120);
+    }
+}

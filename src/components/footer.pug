@@ -1,0 +1,17 @@
+include ../components/mixins/btn
+
+footer.footer
+    .container.footer__container
+        .footer__up
+            .footer__nav
+                a.footer__link(href="./journal.html") Журналы
+                a.footer__link(href="./author.html") Авторам
+                a.footer__link(href="./contact.html") Контакты
+            +btn('footer__btn btn--transparent') Опубликовать
+        .footer__down
+            p.footer__text © Анкил. 2012–2023
+            .footer__documents
+                a.footer__text.footer__text--mr(href="/") Политика конфиденциальности
+                a.footer__text.footer__text--mb(href="/") Оферта
+            a.footer__text.footer__text--mb(href="/") Почта
+    

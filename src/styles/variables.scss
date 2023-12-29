@@ -1,0 +1,41 @@
+@import "functions";
+@import "media-queries";
+
+:root {
+  //margins
+  --x-offset-main: #{inRem(20)};
+  --section-margin: #{inRem(140)};
+  --section-margin-last: #{inRem(200)};
+}
+
+@include e-md {
+  :root {
+    //margins
+    --x-offset-main: #{inRem(70)};
+    --section-margin: #{inRem(80)};
+    --section-margin-last: #{inRem(150)};
+  }
+}
+
+@include md {
+  :root {
+    //margins
+    --x-offset-main: #{inRem(50)};
+  }
+}
+
+@include s {
+  :root {
+    //margins
+    --x-offset-main: #{inRem(35)};
+  }
+}
+
+@include xs {
+  :root {
+    //margins
+    --x-offset-main: #{inRem(25)};
+    --section-margin: #{inRem(60)};
+    --section-margin-last: #{inRem(130)};
+  }
+}

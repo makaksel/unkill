@@ -1,0 +1,17 @@
+mixin bookCard(img, title, author, tags, buy=true, price)
+    .book-card
+        img.book-card__img(src=`./assets/images/book${img}.png`, alt="Книга")
+        if buy===true
+            .book-card__buy
+                svg.book-card__icon(width="20" height="20" viewBox="0 0 20 20")
+                    use(xlink:href="#price")
+                p.book-card__price=price
+        h3.book-card__title=title
+        p.book-card__author=author
+        .book-card__tags
+            each tag in tags
+                span.book-card__tag=tag
+        if buy===true
+            a.book-card__link(href="/") В корзину →
+        else
+            a.book-card__link(href="/") Подробнее →

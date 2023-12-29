@@ -1,0 +1,51 @@
+.about-card {
+    padding: inRem(25);
+
+    &__media {
+        display: flex;
+
+        padding: isRem(19);
+    }
+
+    &__icon {
+        width: 100%;
+        height: 100%;
+        max-width: inRem(100);
+        max-height: inRem(100);
+        margin-bottom: inRem(26);
+    }
+
+
+    &__title {
+        max-width: inRem(300);
+        margin-bottom: inRem(18);
+        font-size: inRem(22);
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: inRem(0.22);
+        color: var(--black);
+    }
+
+    &__dscr {
+        font-size: inRem(20);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        color: var(--grey);
+    }
+
+    @include e-md {
+        padding: 0;
+        padding-top: inRem(30);
+        padding-bottom: inRem(30);
+
+        &__title {
+            max-width: inRem(255);
+            font-size: inRem(18);
+        }
+    }
+
+    @include s {
+        padding: 0;
+    }
+}

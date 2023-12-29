@@ -1,0 +1,7 @@
+mixin aboutCard(imgNumber, title, dscr)
+    .about-card
+        .about-card__media
+            img.about-card__icon(src=`./assets/images/about${imgNumber}.svg`, alt="Картинка")
+        .about-card__content
+            h2.about-card__title=title
+            p.about-card__dscr=dscr

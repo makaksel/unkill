@@ -1,0 +1,106 @@
+.book-card {
+    position: relative;
+
+    &__img {
+        margin-bottom: inRem(6);
+    }
+
+    &__buy {
+        @include flex-row;
+        margin-bottom: inRem(12);
+    }
+
+    &__icon {
+        margin-right: inRem(12);
+    }
+
+    &__title {
+        @include line-clamp;
+        margin-bottom: inRem(12);
+        font-weight: 500;
+    }
+
+    &__title,
+    &__price {
+        font-size: inRem(22);
+        line-height: normal;
+        letter-spacing: inRem(0.22);
+        color: var(--black);
+    }
+
+    &__price {
+        font-weight: 700;
+    }
+
+    &__author {
+        @include line-clamp;
+        margin-bottom: inRem(12);
+        font-size: inRem(16);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: inRem(0.16);
+        color: var(--grey);
+    }
+
+    &__tags {
+        @include flex-row;
+        margin-bottom: inRem(24);
+    }
+
+    &__tag {
+        border-radius: inRem(50);
+        padding: inRem(5) inRem(8);
+        background-color: var(--light-grey);
+        font-size: inRem(14);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: var(--black);
+
+        &:first-child {
+            margin-right: inRem(8);
+        }
+    }
+
+    &__link {
+        padding: inRem(5) inRem(8);
+        font-size: inRem(16);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        color: var(--main);
+        border-radius: inRem(50);
+        transition: color .25s ease-in-out, background-color .25s ease-in-out;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+
+        &:hover {
+            background-color: var(--main);
+            color: var(--white);
+        }
+
+        &:focus {
+            outline: none;
+            background-color: var(--main);
+            color: var(--white);
+        }
+
+        &:active {
+            background-color: var(--main-active);
+        }
+    }
+
+    @include xs {
+        &__title {
+            max-width: inRem(250);
+        }
+    }
+}

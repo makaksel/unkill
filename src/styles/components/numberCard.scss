@@ -1,0 +1,40 @@
+.number-card {
+    @include flex-column;
+    align-items: center;
+    justify-content: center;
+
+    &__title {
+        font-size: inRem(120);
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: inRem(1.2);
+        color: var(--main);
+    }
+
+    &__dscr {
+        max-width: inRem(215);
+        font-size: inRem(20);
+        font-weight: 400;
+        line-height: 140%;
+        color: var(--black);
+        text-align: center;
+    }
+
+    @include e-md {
+        &__title {
+            font-size: inRem(95);
+        }
+    }
+
+    @include md {
+        &__title {
+            font-size: inRem(77);
+        }
+    }
+
+    @include xxs {
+        &__title {
+            font-size: inRem(60);
+        }
+    }
+}

@@ -1,0 +1,39 @@
+include ../components/mixins/btn
+
+header.header
+    .container.header__container
+        a.header__logo-link(href="./index.html")
+            svg.header__logo-icon(width="169" height="25" viewBox="0 0 169 25")
+                use(xlink:href="#logo")
+        nav.header__nav
+            a(class=(activePage === "journal" ? "header__link active" : "header__link") href="./journal.html") Журналы
+            a(class=(activePage === "author" ? "header__link active" : "header__link") href="./author.html") Авторам
+            a(class=(activePage === "contact" ? "header__link active" : "header__link") href="./contact.html") Контакты
+        .header__shop
+            svg.header__shop-icon(width="32" height="33" viewBox="0 0 32 33")
+                use(xlink:href="#shop")
+            a.header__shop-link(href="./market.html") В магазин
+
+            a.header__shop-link(href="#") Страховое дело
+
+            .header__select.select(id='header-select')
+                input(type="hidden" class="hidden-input")
+
+        button.header__burger(id="burger-btn")
+          svg.header__burger-icon.burger-icon(width="25" height="19" viewBox="0 0 25 19")
+            use(xlink:href="#burger")
+
+        .burger-wrraper
+          .burger-menu
+            svg.burger-menu__icon.close(width="24" height="20" viewBox="0 0 24 20")
+                use(xlink:href="#close")
+            nav.burger-menu__links
+                a.burger-menu__link(href="./journal.html") Журналы
+                a.burger-menu__link(href="./author.html") Авторам
+                a.burger-menu__link(href="./contact.html") Контакты
+            .burger-menu__shop
+                svg.header__shop-icon(width="32" height="33" viewBox="0 0 32 33")
+                    use(xlink:href="#shop")
+                a.header__shop-link(href="./market.html") В магазин
+
+            a.header__shop-link(href="#") Страховое дело

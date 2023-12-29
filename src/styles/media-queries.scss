@@ -1,0 +1,50 @@
+$Breakpoint__xx-small: 375px;
+$Breakpoint__x-small-plus: 420px;
+$Breakpoint__x-small: 560px;
+$Breakpoint__small: 730px;
+$Breakpoint__medium: 920px;
+$Breakpoint__extra-medium: 1024px;
+$Breakpoint__large: 1200px;
+
+@mixin lg {
+  @media screen and (max-width: #{$Breakpoint__large}) {
+    @content;
+  }
+}
+
+@mixin e-md {
+  @media screen and (max-width: #{$Breakpoint__extra-medium}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (max-width: #{$Breakpoint__medium}) {
+    @content;
+  }
+}
+
+@mixin s {
+  @media screen and (max-width: #{$Breakpoint__small}) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media screen and (max-width: #{$Breakpoint__x-small}) {
+    @content;
+  }
+}
+
+@mixin xs-plus {
+  @media screen and (max-width: #{$Breakpoint__x-small-plus}) {
+    @content;
+  }
+}
+
+@mixin xxs {
+  @media screen and (max-width: #{$Breakpoint__xx-small}) {
+    @content;
+  }
+}
+
