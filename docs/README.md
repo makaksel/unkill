@@ -1,6 +1,6 @@
-# 📰 Ankyl — Landing for magazine
+# 📰 Ankyl — Publish house
 
-A frontend development and layout project for a landing page designed to sell placements on an online magazine’s website.  
+Project on layout and front-end development of a landing page for a publishing house.
 Built with **Gulp**, supports automated build, optimization, and live-reload.
 
 ---
@@ -71,7 +71,7 @@ npm run build
 
 # 📰 Анкил — лендинга журнала
 
-Проект по вёрстке и фронтенд-разработке лендинга для продаж размещения на сайте онлайн-журнала.  
+Проект по вёрстке и фронтенд-разработке лендинга для издательского дома.
 Собран с помощью **Gulp**, поддерживает автоматическую сборку, оптимизацию и live-reload.
 
 ---
