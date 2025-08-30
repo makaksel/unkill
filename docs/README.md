@@ -25,6 +25,24 @@ Live demo available at:
 - **GitHub Pages** for deployment
 
 ---
+## 📂 Project structure
+```
+unkill/
+├── docs/           # Documentation
+├── gulp/           # Gulp build files
+│ ├── config/       # Configuration files
+│ └── tasks/        # Individual gulp tasks
+├── src/            # Source code
+│ ├── assets/       # Media (images, fonts, etc.)
+│ ├── components/   # Interface components
+│ ├── pages/        # Project pages
+│ ├── scripts/      # JS
+│ └── styles/       # Styles (SCSS/CSS)
+└── gulpfile.js     # Build gulp
+
+```
+---
+
 
 ## ⚡ Installation & Usage
 Clone the repository:
@@ -77,6 +95,24 @@ npm run build
 - **Flexbox / Grid** для вёрстки
 - **GitHub Pages** для публикации
 
+---
+
+## 📂 Структура проекта
+```
+unkill/
+├── docs/           # Документация
+├── gulp/           # Файлы сборки gulp
+│ ├── config/       # Конфигурационные файлы
+│ └── tasks/        # Отдельные gulp-задачи
+├── src/            # Исходный код проекта
+│ ├── assets/       # Медиафайлы (изображения, шрифты и т.п.)
+│ ├── components/   # Компоненты интерфейса
+│ ├── pages/        # Страницы проекта
+│ ├── scripts/      # JS
+│ └── styles/       # Стили (SCSS/CSS)
+└── gulpfile.js     # Сборка gulp
+
+```
 ---
 
 ## ⚡ Установка и запуск
