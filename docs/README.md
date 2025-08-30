@@ -8,10 +8,10 @@ Built with **Gulp**, supports automated build, optimization, and live-reload.
 ## ✨ Preview
 
 ### Desktop version
-![Desktop preview](docs/screenshot-desktop.png)
+![Desktop preview](screenshot-desktop.png)
 
 ### Mobile version
-![Mobile preview](docs/screenshot-mobile.png)
+![Mobile preview](screenshot-mobile.png)
 
 Live demo available at:  
 👉 [https://makaksel.github.io/unkill/](https://makaksel.github.io/unkill/)
@@ -61,10 +61,10 @@ npm run build
 ## ✨ Превью
 
 ### Десктопная версия
-![Desktop preview](docs/screenshot-desktop.png)
+![Desktop preview](screenshot-desktop.png)
 
 ### Мобильная версия
-![Mobile preview](docs/screenshot-mobile.png)
+![Mobile preview](screenshot-mobile.png)
 
 Онлайн-версия доступна по ссылке:  
 👉 [https://makaksel.github.io/unkill/](https://makaksel.github.io/unkill/)
